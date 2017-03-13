@@ -1,0 +1,11 @@
+<section class="prices form-group">
+  <h3>Prices</h3>
+  <span>From:</span>
+  <select name="startPrice" type="number" [(ngModel)]="selectedStartPrice" (ngModelChange)="onSelectStartPrice()">
+    <option [disabled]="startPriceState(price)" *ngFor="let price of priceValues" [ngValue]="price.value">{{price.value}}</option>
+  </select>
+  <span>To: </span>
+  <select name="endPrice" type="number" [(ngModel)]="selectedEndPrice" (ngModelChange)="onSelectEndPrice()">
+    <option [disabled]="endPriceState(price)" *ngFor="let price of priceValues" [ngValue]="price.value">{{price.value}}</option>
+  </select>
+</section>

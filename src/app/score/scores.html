@@ -1,0 +1,11 @@
+<section class="score form-group">
+  <h3>Customer's score</h3>
+  <span>From:</span>
+  <select name="startValue" type="number" [(ngModel)]="selectedStartValue" (ngModelChange)="onSelectStartValue()">
+    <option [disabled]="startScoreState(score)" *ngFor="let score of scoresValues" [ngValue]="score.value">{{score.value}}</option>
+  </select>
+  <span>To: </span>
+  <select name="endValue" type="number" [(ngModel)]="selectedEndValue" (ngModelChange)="onSelectEndValue()">
+    <option [disabled]="endScoreState(score)" *ngFor="let score of scoresValues" [ngValue]="score.value">{{score.value}}</option>
+  </select>
+</section>

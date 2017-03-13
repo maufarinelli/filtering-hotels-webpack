@@ -1,0 +1,14 @@
+<section class="accommodation-type form-group">
+  <h3>Accommodation Type</h3>
+  <div *ngFor="let type of accommodationTypes" class="col-sm-offset-2 col-sm-10">
+    <div class="checkbox">
+      <label>
+        <input
+          type="checkbox"
+          [ngModel]="type.checked"
+          (ngModelChange)="onCheckToggle(type)">
+        {{type.name}}
+      </label>
+    </div>
+  </div>
+</section>

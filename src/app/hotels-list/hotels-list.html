@@ -1,0 +1,8 @@
+<section class="hotels-list">
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let hotel of hotels">
+      <h4>{{hotel.name}}</h4>
+      <p>{{hotel.price}} - <span>Score: {{hotel.score}}</span></p>
+    </li>
+  </ul>
+</section>
